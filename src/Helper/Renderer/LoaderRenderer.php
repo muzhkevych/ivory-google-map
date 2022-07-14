@@ -101,6 +101,7 @@ class LoaderRenderer extends AbstractJsonRenderer
         $jsonBuilder = $this->getJsonBuilder();
 
         $parameters = ['language' => $this->language];
+        $this->setKey($_ENV['GOOGLE_MAP_API_KEY']);
 
         if ($this->hasKey()) {
             $parameters['key'] = $this->key;
